@@ -22,4 +22,4 @@ I would follow these steps:
 * Add the HTML content for the menu page.
 * Create a new GET route in server.js using app.get('/menu', ...).
 * Use res.sendFile() and path.resolve() to send the menu.html file.
-* Test the new route by visiting http://localhost:3000/menu in the browser.
+* http://localhost:3000/menu in the browser
