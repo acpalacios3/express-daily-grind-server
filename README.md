@@ -1,25 +1,29 @@
-## REFLECTION:
+## The Daily Grind – Express Server
 
-**1. What is the difference between res.send() and res.**
-sendFile()? When would you use one over the other?
+**Description**
 
-The difference between res.send() and res.sendFile() is that res.send() sends a response directly, such as text or HTML content, while res.sendFile() sends an existing file to the browser.
-I would use res.send() to send a simple message and res.sendFile() when I want to display an HTML page stored in my project.
+The Daily Grind is a simple web server built with Node.js and Express. 
+This project demonstrates how to create an Express application, define GET routes, serve static files, and send HTML pages to the browser.
+The application contains two web pages: a index and a contact page.
 
+**Technologies:**
 
-**2. Why is the path module necessary when serving files? What could go wrong if you just used a relative path like 'public/index.html'?**
+Node.js: JavaScript runtime environment used to run the server.
+Express.js: Web framework used to create the server and handle HTTP requests.
+Path: Built-in Node.js module used to work with file paths.
+HTML: Used to create content of the web pages.
+JavaScript ES Modules: Used to import modules with import statements.
 
-The path module is necessary because it helps us create correct file paths when working with files and directories.
+**How to Run the Project**
 
-A relative path depends on the current working directory. If we run the server from a different directory, the path might not point to the correct file.
-Using path.resolve() converts a relative path into an absolute path, which helps Express find the file correctly when using res.sendFile().
+1. Install dependencies: npm install
+2. Start the server: node server.js
+3. Open your browser and test the following routes:
 
-**3. How would you add a third page (e.g., a menu page) to this server? What steps would you take?**
+Test:
+http://localhost:3000/
+Welcome to The Daily Grind!
 
-I would follow these steps:
-
-* Create a new file called menu.html inside the public folder.
-* Add the HTML content for the menu page.
-* Create a new GET route in server.js using app.get('/menu', ...).
-* Use res.sendFile() and path.resolve() to send the menu.html file.
-* Test the new route by visiting http://localhost:3000/menu in the browser.
+http://localhost:3000/contact
+Contact Us
+if you have any question.

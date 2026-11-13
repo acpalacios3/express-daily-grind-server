@@ -35,10 +35,3 @@ app.listen(port, () => {
 });
 
 
-// TEST:
-// http://localhost:3000/
-// Welcome to The Daily Grind!
-
-// http://localhost:3000/contact
-// Contact Us
-// if you have any question.
